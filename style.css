@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.main .heading {
+  positon: relative;
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center center/ cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.main .heading h1 {
+  position: relative;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.9);
+  font-size: 2.8rem;
+}
+.main .heading i {
+  position: relative;
+  right: -15%;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.main .heading .cartItems {
+  position: absolute;
+  right: 23%;
+  top: 6.5%;
+  color: #fff;
+  font-size: 0.78rem;
+  background: #000;
+  padding: 2px 8px;
+  border-radius: 50%;
+  z-index: 99;
+}
+.main .items {
+  poaition: relative;
+  width: 90%;
+  height: 400px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  margin: auto;
+  margin-top: 5%;
+  padding: 10px 15px;
+}
+.main .items .item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.main .items .item img {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  object-fit: contain;
+}
+.main .items .item h1 {
+  position: relative;
+  font-size: 1.18rem;
+  font-weight: normal;
+  color: #000;
+  padding: 5px 2px;
+  text-align: center;
+}
+.main .items .item p {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding: 0 25px;
+  color: #017bf5;
+}
+.main .items .item a {
+  position: relative;
+  text-decoration: none;
+  background: #01fbff;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.main .items .item a:hover {
+  background: #017bf5;
+  color: #fff;
+}
+.main .cartDiv {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: 0.3s linear;
+}
+.main .cartDiv.active {
+  transform: scale(1);
+}
+.main .cartDiv .cartData {
+  position: relative;
+  background: #fff;
+  width: 70%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 55px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.main .cartDiv .cartData .closeCart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  background: #f00;
+}
+.main .cartDiv .cartData .closeCart:hover {
+  background: #f23;
+}
+.main .cartDiv .cartData h1 {
+  position: relative;
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #017bf5;
+  letter-spacing: 2px;
+}
+.main .cartDiv .cartData table {
+  position: relative;
+  width:100%;
+  height: auto;
+  text-align: center;
+}
+.main .cartDiv .cartData table tr td{
+  padding:15px 10px;
+}
+.main .cartDiv .cartData table tr:nth-child(1),
+.main .cartDiv .cartData table tr:nth-child(1):hover{
+
+  background:#017bF5;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  cursor: default;
+}
+.main .cartDiv .cartData table tr:hover{
+  background: #eee;
+}
+.main .cartDiv .cartData table tr td a{
+  text-decoration: none;
+  color:#fff;
+  background: #000;
+  padding:10px;
+  margin:0 5px;
+}
